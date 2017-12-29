@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Excel</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>access</name>
+			<type>2</type>
+			<location>D:/Java/Servlet/MyServlet/src/access</location>
+		</link>
+		<link>
+			<name>dao</name>
+			<type>2</type>
+			<location>D:/Java/Servlet/MyServlet/src/dao</location>
+		</link>
+		<link>
+			<name>factory</name>
+			<type>2</type>
+			<location>D:/Java/Servlet/MyServlet/src/factory</location>
+		</link>
+	</linkedResources>
+</projectDescription>

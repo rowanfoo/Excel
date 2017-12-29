@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="E:/Java/lib2/voice-cmu-slt-hsmm-5.2.jar"/>
+	<classpathentry kind="lib" path="E:/Java/lib2/voice-dfki-poppy-hsmm-5.1.jar"/>
+	<classpathentry kind="lib" path="E:/Java/lib2/voice-dfki-prudence-hsmm-5.1.jar"/>
+	<classpathentry kind="lib" path="E:/Java/lib4/reactive-streams-1.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="/MyServet/output"/>
+	<classpathentry kind="lib" path="E:/Java/lib/c3p0-0.9.5.2.jar"/>
+	<classpathentry kind="lib" path="E:/Java/lib/jdbc.jar"/>
+	<classpathentry kind="lib" path="E:/Java/lib/jsoup-1.9.2.jar"/>
+	<classpathentry kind="lib" path="E:/Java/lib/mchange-commons-java-0.2.11.jar"/>
+	<classpathentry kind="lib" path="E:/Java/lib/mysql-connector-java-5.1.39-bin.jar"/>
+	<classpathentry kind="lib" path="E:/Java/lib/poi-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="E:/Java/lib/poi-examples-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="E:/Java/lib/poi-excelant-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="E:/Java/lib/poi-ooxml-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="E:/Java/lib/poi-ooxml-schemas-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="E:/Java/lib/poi-scratchpad-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="E:/Java/lib4/rxjava-2.1.0.jar" sourcepath="C:/Users/rowan/.sourceattacher/rxjava-2.1.0-sources.jar"/>
+	<classpathentry kind="lib" path="E:/Java/lib/swingx-all-1.6.4.jar"/>
+	<classpathentry kind="lib" path="E:/Java/Project/TTS/bin"/>
+	<classpathentry kind="lib" path="E:/Java/lib3/selenium-server-standalone-3.0.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

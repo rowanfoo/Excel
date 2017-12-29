@@ -27,7 +27,7 @@ public class ASXNews {
 		
 		try {
 			int count = 0;
-			
+			   
 			Response response = Jsoup.connect(url).followRedirects(true).execute();     
 		    url = response.url().toString();
 			

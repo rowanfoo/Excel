@@ -338,7 +338,10 @@ public class ASXCSVImport extends MyDatabase{
 //			}
 //			ASXCSVImport axs = new ASXCSVImport("HistoricalData.txt");
 			//MetaStock
-			ASXCSVImport axs = new ASXCSVImport("E://HistoricalData.txt");
+			
+//			ASXCSVImport axs = new ASXCSVImport("E://HistoricalData.txt");
+			ASXCSVImport axs = new ASXCSVImport("C://Users/rowan/Downloads/HistoricalData.txt");
+			
 			axs.run();
 			axs.insertAll();
 			

@@ -27,7 +27,9 @@ public class AsxNewsChromeBrowser  extends MyDatabase {
 		WebDriver driver = new ChromeDriver();
 		String html = "";
 		try {
-			String url = "http://www.asx.com.au/asx/statistics/todayAnns.do";
+			//String url = "http://www.asx.com.au/asx/statistics/todayAnns.do"; // today 
+			 
+			String url ="http://www.asx.com.au/asx/statistics/prevBusDayAnns.do"; // yesterday
 			driver.get(url);
 
 			try {
@@ -51,6 +53,7 @@ public class AsxNewsChromeBrowser  extends MyDatabase {
 		finally {
 			// driver.quit();
 		}
+		System.out.println("Run news parser : ");
 		new AsxNewsString(html);
 
 		System.out.println("FINISH : ");

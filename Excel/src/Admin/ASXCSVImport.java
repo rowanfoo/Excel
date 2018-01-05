@@ -83,12 +83,6 @@ public class ASXCSVImport extends MyDatabase{
 	public ASXCSVImport(String file) throws Exception{
 		csvFile = csvFile+file;
 		csvFile = file;
-//		allcodes = new ArrayList<String>();
-//		allcodes.addAll(Arrays.asList(arr1));
-//		allcodes.addAll(Arrays.asList(arr2));
-//		allcodes.addAll(Arrays.asList(arr3));
-//		allcodes.addAll(Arrays.asList(arr4));
-//		allcodes.addAll(Arrays.asList(arr5));
 		getAllCodeFileToRun();
 	}
 	
@@ -102,8 +96,8 @@ public class ASXCSVImport extends MyDatabase{
 
 		
 
-		System.out.println("ASXCSVImport  getAllCodeFileToRun " + ASXCSVImport.class.getClassLoader().getResource("").getPath() +"ASXCodes.txt" );
-		Scanner scanner = new Scanner(new File( ASXCSVImport.class.getClassLoader().getResource("").getPath() +"ASXCodes.txt"  ));
+		//System.out.println("ASXCSVImport  getAllCodeFileToRun " + ASXCSVImport.class.getClassLoader().getResource("").getPath() +"ASXCodes.txt" );
+		Scanner scanner = new Scanner(new File( "H:\\GIT\\ASXCodes.txt"  ));
 		scanner.useDelimiter(",");
         while(scanner.hasNext()){
         	allcodes.add( scanner.next().replaceAll("\\r|\\n", "").trim().toUpperCase() );
@@ -114,43 +108,6 @@ public class ASXCSVImport extends MyDatabase{
 	}
 	
 	
-//	
-//	public void addData() throws Exception {
-//		try {
-//
-//			br = new BufferedReader(new FileReader(csvFile));
-//			while ((line = br.readLine()) != null) {
-//
-//				// use comma as separator
-//				String[] country = line.split(cvsSplitBy);
-//				String date = LocalDate.parse(country[1], DateTimeFormatter.ofPattern("yyyyMMdd")).toString();
-//				filedata.add(new Temp(country[0], date, country[5], "0", "0", country[2], country[3], country[4],
-//						country[6]));
-//				System.out.println(country[0] +" , "+  country[5]);
-//
-//			}
-//
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		} finally {
-//			if (br != null) {
-//				try {
-//					br.close();
-//				} catch (IOException e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		}
-//
-//
-////	
-//
-//	
-//	
-//	
-//	}
 
 	public void setFileData()throws Exception {
 	
@@ -316,7 +273,7 @@ public class ASXCSVImport extends MyDatabase{
 	}
 	
 
-	
+
 	
 	
 	

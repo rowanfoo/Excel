@@ -43,7 +43,7 @@ public class  Up4PercentTodayStr extends MyDatabase{
 		
 		
 		String mysql ="SELECT code,close,fifty, format(fiftychg*100,2) as fiftyDchg   "+
-	     "FROM  data  where date='"+ date+"' and changePercent >4"; 
+	     "FROM  data  where date='"+ date+"' and changePercent >0.04"; 
 	     
 		
 		

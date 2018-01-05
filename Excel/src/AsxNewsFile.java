@@ -71,8 +71,9 @@ public class AsxNewsFile {
 			for (Element tb : table) {
 				String t = tb.attr("class");
 				String pattern = ".*announcements.*";
-				// boolean matches = Pattern.matches(pattern, t)
-			
+				 boolean matches = Pattern.matches(pattern, t);
+				System.out.println("AsxNewsFile matches:  "+ matches);
+
 
 			//	System.out.println("CORRECT TABLE:" + t);
 				if (Pattern.matches(pattern, t)) {
@@ -117,7 +118,7 @@ public class AsxNewsFile {
 								count++;
 
 							}
-
+							System.out.println("AsxNewsFile :  "+ code +" :  "+ title);
 							if (!codes.contains(code + title)) {
 								myarr.add(new NewsAccess(code, new Date(), asxUrl+link, title));
 								codes.add(code + title);

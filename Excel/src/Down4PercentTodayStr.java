@@ -38,14 +38,14 @@ public class  Down4PercentTodayStr  extends MyDatabase{
 	
 
 		
-	public void addData(double percent,String date)throws Exception {
+	public void addData(String date)throws Exception {
 		Statement stmt= con.createStatement(); 
 	
 		//show all that haas fallen below - %;
 		
 		
 		String mysql ="SELECT code,close,format(fifty,2) as fiftyd,changePercent , format(fiftychg*100,2) as fiftyDchg   "+
-	     "FROM  data  where date='"+ date+"' and changePercent < -4"; 
+	     "FROM  data  where date='"+ date+"' and changePercent < -0.04"; 
 	     
 		
 	      ResultSet rs = stmt.executeQuery(mysql);
@@ -58,7 +58,7 @@ public class  Down4PercentTodayStr  extends MyDatabase{
 	    	ps.setDouble(4, rs.getDouble("close"));
 	    	ps.setDouble(5, rs.getDouble("fiftyd"));
 	    	ps.setDouble(6, rs.getDouble("fiftyDchg") );
-	    	ps.setDouble(7, rs.getDouble("changePercent"));
+	    	ps.setDouble(7, rs.getDouble("changePercent") * 100);
 	    	
 	   
 	    	ps.addBatch();
@@ -80,14 +80,14 @@ public class  Down4PercentTodayStr  extends MyDatabase{
 	public void run() {
 		try {
 
-			double percent = 0.05;
+		
 			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 			String date = dateFormat.format(new Date());
 
 			System.out.println("1 ");
 
 			logger.info("FiftyDayDistance run 1");
-			addData(percent, date);
+			addData(date);
 			ps.executeBatch();
 			close();
 

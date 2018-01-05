@@ -56,12 +56,13 @@ public class AsxNewsString  extends MyDatabase {
 			for (Element tb : table) {
 				String t = tb.attr("class");
 				String pattern = ".*announcements.*";
-				// boolean matches = Pattern.matches(pattern, t)
+				 boolean matches = Pattern.matches(pattern, t);
 			
 
-				System.out.println("CORRECT TABLE:" + t);
+				System.out.println("AsxNewsString MATCHES:" + matches);
+				
 				if (Pattern.matches(pattern, t)) {
-					// System.out.println("CORRECT TABLE");
+					 System.out.println("CORRECT TABLE");
 					boolean firsttime = false;
 
 					Elements tr = tb.select("tr");
@@ -77,13 +78,15 @@ public class AsxNewsString  extends MyDatabase {
 							 //System.out.println("CORRECT
 							// CODE:"+((Element)th.get(0)).text());
 							code = ((Element) th.get(0)).text();
-
+							 System.out.println("CORRECT code : "+ code);
 							Elements td = etr.select("td");
 							count = 0;
 							for (Element etd : td) {
 
 								if (count == 2)
 									title = etd.text();
+								 System.out.println("CORRECT TABLE  title : "+ title);
+								
 								if (count == 4) {
 									// System.out.println("CORRECT
 									// URL:"+etd.val() );
@@ -102,7 +105,7 @@ public class AsxNewsString  extends MyDatabase {
 								count++;
 
 							}
-
+							System.out.println("AsxNewsString :"+code +" :: "+ title);		   
 							if (!codes.contains(code + title)) {
 								myarr.add(new NewsAccess(code, new Date(), asxUrl+link, title));
 								codes.add(code + title);
